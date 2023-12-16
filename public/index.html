@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>%REACT_APP_SEO_TITLE%</title>
+		<meta name="description" content="%REACT_APP_SEO_DESCRIPTION%" />
+		<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
+		<meta name="theme-color" content="%REACT_APP_THEME_COLOR%" />
+
+		<meta name="og:title" content="%REACT_APP_SEO_TITLE%" />
+		<meta name="og:url" content="https://%REACT_APP_DOMAIN%" />
+		<meta
+			name="og:image"
+			content="https://%REACT_APP_DOMAIN%%PUBLIC_URL%/favicon.png"
+		/>
+		<meta name="og:site_name" content="%REACT_APP_DOMAIN%" />
+		<meta name="og:description" content="%REACT_APP_SEO_DESCRIPTION%" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Permanent+Marker&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css">
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GA_ID%"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', '%REACT_APP_GA_ID%');
+		</script>
+		
+		<style>
+			:root {
+				--accent: #4f9844;
+			}
+
+			html {
+				background: #083a23;
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				background: #083a23;
+			}
+
+			#root {
+				min-height: 0vh;
+			}
+
+			#loader {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 80px;
+				height: 80px;
+				z-index: 3;
+				transform: translate(-50%, -50%);
+			}
+
+			#loader:before,
+			#loader:after {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: var(--accent);
+				animation: ripple 1s ease-in-out infinite;
+				border-radius: 50%;
+			}
+
+			@keyframes ripple {
+				0% {
+					opacity: 0.5;
+					transform: scale(1);
+				}
+				100% {
+					opacity: 0;
+					transform: scale(1.66);
+				}
+			}
+
+			#loader:before {
+				z-index: -2;
+			}
+
+			#loader:after {
+				animation-delay: 0.3s;
+				z-index: -1;
+			}
+
+			#loader > div {
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #083a23;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+
+			#loader img {
+				position: absolute;
+				display: block;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				transform: translate(-50%, -50%);
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			if (location.protocol.substr(0, 4) === "file")
+			{
+				alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+			}
+		</script>
+		<noscript>
+			<div id="notSupportedWrap">
+				<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+				<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+			</div>
+		</noscript>
+		<script src="scripts/supportcheck.js"></script>
+		<script src="scripts/offlineclient.js" type="module"></script>
+		<script src="scripts/main.js" type="module"></script>
+		<script src="scripts/register-sw.js" type="module"></script>
+		
+		<div id="root" class="d-flex flex-column">
+			<div id="loader">
+				<div><img src="/favicon.png" /></div>
+			</div>
+			<span style="opacity: 0">%REACT_APP_SEO_DESCRIPTION%</span>
+		</div>
+	</body>
+</html>
