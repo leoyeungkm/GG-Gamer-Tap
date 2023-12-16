@@ -1,4 +1,4 @@
-# Solana GGDUCK Project Using React.js + CONSTRUCT 3
+# Solana GG Gamer Test Project Using React.js + CONSTRUCT 3
 
 ## How to run
     git clone https://github.com/Det-Tech/ggduck-game
