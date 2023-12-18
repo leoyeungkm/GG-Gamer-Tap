@@ -1,9 +1,9 @@
 # Solana GG Gamer Test Project
 
 ## How to run
-    git clone https://github.com/Det-Tech/ggduck-game
+    git clone https://github.com/leoyeungkm/gg-gamer-tap
 
-    cd ggduck-game
+    cd gg-gamer-tap
 
     npm install
 
